@@ -1,0 +1,6 @@
+{
+  "name": "Jalapeño Taco",
+  "description": "A fully animated, responsive restaurant website for Jalapeño Taco, an elevated Mexican taqueria in Westchester, IL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
