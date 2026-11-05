@@ -195,7 +195,7 @@ export default function Footer({ setView }: FooterProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-sm font-sans text-[#F4EFE3]/50">
           <p>© {new Date().getFullYear()} Jalapeño Taco. All rights reserved.</p>
           <p className="mt-4 sm:mt-0 flex items-center gap-1.5">
-            Made with fresh jalapeños in cicero, ILLINOIS
+            Made with fresh jalapeños in Cicero, Illinois
           </p>
         </div>
 
