@@ -53,10 +53,10 @@ export default function VisitView({ setView }: VisitViewProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="font-mono text-xs text-[#E8A33D] font-bold tracking-widest uppercase mb-2.5 block">
-              VISIT OUR LOCATION
+            <span className="font-sans text-sm text-[#E8A33D] font-semibold mb-2.5 block">
+              Visit our location
             </span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-black tracking-tight text-[#1F2A1A] leading-none">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-sans font-semibold tracking-tight text-[#1F2A1A] leading-none">
               Jalapeño Taco Westchester
             </h1>
           </motion.div>
@@ -76,8 +76,8 @@ export default function VisitView({ setView }: VisitViewProps) {
             variants={fadeInVariants}
           >
             <div>
-              <h2 className="text-2xl sm:text-4xl font-sans font-black tracking-tight text-[#1F2A1A] mb-4">
-                Taste True Tradition
+              <h2 className="text-2xl sm:text-4xl font-sans font-semibold tracking-tight text-[#1F2A1A] mb-4">
+                Taste true tradition
               </h2>
               <p className="text-[#6B6358] text-base leading-relaxed font-medium max-w-xl">
                 Located on Roosevelt Road in Westchester, Illinois. Drop in for a quick lunch, family dinner, or order late-night pickup directly from our grill to your table.
@@ -85,17 +85,17 @@ export default function VisitView({ setView }: VisitViewProps) {
             </div>
 
             {/* Address Block */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 glass-panel p-8 rounded-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 glass-panel p-8 rounded-2xl">
               <div className="space-y-4">
                 <div className="w-10 h-10 rounded-full bg-[#4C7A2A]/10 text-[#4C7A2A] flex items-center justify-center">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-sm text-[#1F2A1A] tracking-wide">LOCATION</h4>
+                  <h4 className="font-sans font-semibold text-sm text-[#1F2A1A]">Location</h4>
                   <p className="text-sm text-[#6B6358] font-medium mt-1.5 leading-relaxed">
                     10229 Roosevelt Rd<br />Westchester, IL 60154
                   </p>
-                  <span className="inline-block text-[10px] font-mono font-bold text-[#E8A33D] uppercase tracking-wider mt-1.5 bg-[#1F2A1A] px-2.5 py-1 rounded">
+                  <span className="inline-block text-sm font-sans font-semibold text-[#E8A33D] mt-1.5 bg-[#1F2A1A] px-2.5 py-1 rounded">
                     Westchester, IL
                   </span>
                 </div>
@@ -106,10 +106,10 @@ export default function VisitView({ setView }: VisitViewProps) {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-sm text-[#1F2A1A] tracking-wide">PHONE & ENQUIRIES</h4>
+                  <h4 className="font-sans font-semibold text-sm text-[#1F2A1A]">Phone & enquiries</h4>
                   <a
                     href="tel:+17086529000"
-                    className="text-sm font-mono font-bold text-[#4C7A2A] hover:text-[#D9352A] transition-colors block mt-2"
+                    className="text-sm font-sans font-semibold text-[#4C7A2A] hover:text-[#D9352A] transition-colors block mt-2"
                   >
                     (708) 652-9000
                   </a>
@@ -126,10 +126,10 @@ export default function VisitView({ setView }: VisitViewProps) {
                 variant="primary"
                 size="lg"
                 onClick={handleGetDirections}
-                className="shadow-md"
+                className="shadow-sm"
               >
                 <Navigation className="w-4 h-4" />
-                Get Directions on Google Maps
+                Get directions on google maps
               </Button>
               <Button
                 variant="outline"
@@ -137,21 +137,21 @@ export default function VisitView({ setView }: VisitViewProps) {
                 onClick={() => setView('menu')}
               >
                 <ShoppingBag className="w-4 h-4" />
-                Order Pickup Online
+                Order pickup online
               </Button>
             </div>
 
             {/* Delivery Partners & Hygiene assurance */}
             <div className="pt-6 border-t border-[#4C7A2A]/5 space-y-4">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#6B6358] uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-sm font-sans font-semibold text-[#6B6358]">
                 <ShieldCheck className="w-4 h-4 text-[#4C7A2A]" />
-                DELIVERY PARTNERS
+                Delivery partners
               </div>
               <div className="flex flex-wrap gap-4 items-center opacity-70">
                 {['Uber Eats', 'DoorDash', 'Grubhub', 'Postmates'].map((partner) => (
                   <span
                     key={partner}
-                    className="px-4 py-2 bg-transparent border border-[#4C7A2A]/10 rounded-full font-sans text-xs font-bold text-[#1F2A1A]"
+                    className="px-4 py-2 bg-transparent border border-[#4C7A2A]/10 rounded-full font-sans text-xs font-semibold text-[#1F2A1A]"
                   >
                     {partner}
                   </span>
@@ -162,7 +162,7 @@ export default function VisitView({ setView }: VisitViewProps) {
 
           {/* Daily Schedule (Right Column) */}
           <motion.div
-            className="lg:col-span-5 glass-panel p-8 sm:p-10 rounded-3xl"
+            className="lg:col-span-5 glass-panel p-8 sm:p-10 rounded-2xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -170,23 +170,23 @@ export default function VisitView({ setView }: VisitViewProps) {
           >
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-5 h-5 text-[#E8A33D]" />
-              <h3 className="font-sans font-black text-xl text-[#1F2A1A]">
-                Operating Hours
+              <h3 className="font-sans font-semibold text-xl text-[#1F2A1A]">
+                Operating hours
               </h3>
             </div>
 
             <div className="space-y-4 divide-y divide-[#4C7A2A]/5">
               {daySchedule.map((sched) => (
                 <div key={sched.day} className="flex justify-between items-center pt-3.5 first:pt-0">
-                  <span className="font-sans font-bold text-sm text-[#1F2A1A]">{sched.day}</span>
-                  <span className="font-mono text-xs font-medium text-[#6B6358]">{sched.hours}</span>
+                  <span className="font-sans font-semibold text-sm text-[#1F2A1A]">{sched.day}</span>
+                  <span className="font-sans text-sm font-medium text-[#6B6358]">{sched.hours}</span>
                 </div>
               ))}
             </div>
 
             <div className="mt-8 pt-6 border-t border-[#4C7A2A]/5 bg-[#4C7A2A]/5 p-5 rounded-xl text-center">
-              <p className="text-xs font-mono text-[#4C7A2A] font-bold uppercase tracking-wider mb-1">
-                LATE NIGHT GRILLED CRUSTS
+              <p className="text-sm font-sans text-[#4C7A2A] font-semibold mb-1">
+                Late night GRILLED crusts
               </p>
               <p className="text-xs text-[#6B6358] font-semibold leading-relaxed">
                 Enjoy hot, sizzling al pastor, chorizo, and fresh birria until midnight on Fridays and Saturdays!
@@ -201,7 +201,7 @@ export default function VisitView({ setView }: VisitViewProps) {
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-20">
         <motion.div
           id="embedded-fullscreen-map-wrapper"
-          className="rounded-3xl overflow-hidden shadow-xl h-[450px] border border-[#4C7A2A]/10 relative group"
+          className="rounded-2xl overflow-hidden shadow-sm h-[450px] border border-[#4C7A2A]/10 relative group"
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-50px' }}
@@ -221,9 +221,9 @@ export default function VisitView({ setView }: VisitViewProps) {
           <div className="absolute top-6 left-6 z-10">
             <button
               onClick={handleGetDirections}
-              className="bg-[#FBF8F1] hover:bg-[#4C7A2A] text-[#1F2A1A] hover:text-[#FBF8F1] px-4 py-2.5 rounded-full text-xs font-bold tracking-wide shadow-md flex items-center gap-2 border border-[#4C7A2A]/10 transition-colors cursor-pointer"
+              className="bg-[#FBF8F1] hover:bg-[#4C7A2A] text-[#1F2A1A] hover:text-[#FBF8F1] px-4 py-2.5 rounded-full text-xs font-semibold shadow-sm flex items-center gap-2 border border-[#4C7A2A]/10 transition-colors cursor-pointer"
             >
-              Open in Google Maps App
+              Open in google maps app
               <ExternalLink className="w-3.5 h-3.5" />
             </button>
           </div>

@@ -15,10 +15,10 @@ export default function NotFoundView({ setView }: NotFoundViewProps) {
         {/* Animated Custom Sad Jalapeño Vector Illustration */}
         <div className="relative w-56 h-56 flex items-center justify-center">
           {/* Pulsing light behind character */}
-          <div className="absolute inset-0 bg-[#E8A33D]/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute inset-0 bg-[#E8A33D]/10 rounded-full blur-3xl" />
 
           {/* Sad Jalapeño Character SVG */}
-          <svg viewBox="0 0 200 200" className="w-full h-full relative z-10 drop-shadow-lg">
+          <svg viewBox="0 0 200 200" className="w-full h-full relative z-10">
             {/* Sombrero Hat */}
             <motion.g
               initial={{ rotate: -5 }}
@@ -92,14 +92,14 @@ export default function NotFoundView({ setView }: NotFoundViewProps) {
           </svg>
 
           {/* Compass icon element */}
-          <div className="absolute top-10 right-4 bg-[#D9352A] text-[#FBF8F1] p-2 rounded-full shadow-lg border border-[#FBF8F1]/10">
+          <div className="absolute top-10 right-4 bg-[#D9352A] text-[#FBF8F1] p-2 rounded-full shadow-sm border border-[#FBF8F1]/10">
             <Compass className="w-5 h-5 animate-spin" style={{ animationDuration: '8s' }} />
           </div>
         </div>
 
         {/* Copywriting Details */}
         <div className="space-y-4">
-          <h2 className="text-3xl font-sans font-black tracking-tight text-[#1F2A1A]">
+          <h2 className="text-3xl font-sans font-semibold tracking-tight text-[#1F2A1A]">
             ¡Ay Caramba! 404
           </h2>
           <p className="text-base font-semibold text-[#D9352A]">
@@ -121,7 +121,7 @@ export default function NotFoundView({ setView }: NotFoundViewProps) {
             className="w-full sm:w-auto"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            Back to home
           </Button>
           <Button
             variant="outline"
@@ -131,7 +131,7 @@ export default function NotFoundView({ setView }: NotFoundViewProps) {
             }}
             className="w-full sm:w-auto"
           >
-            Go To Taco Menu
+            Go to taco menu
           </Button>
         </div>
       </div>

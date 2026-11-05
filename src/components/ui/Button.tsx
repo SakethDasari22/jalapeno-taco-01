@@ -69,7 +69,7 @@ export default function Button({
   };
 
   // Build styles
-  const baseStyles = "relative inline-flex items-center justify-center font-sans font-semibold rounded-full tracking-wide transition-all duration-300 select-none cursor-pointer overflow-hidden outline-none focus:ring-2 focus:ring-offset-2";
+  const baseStyles = "relative inline-flex items-center justify-center font-sans font-semibold rounded-full  transition-colors duration-300 select-none cursor-pointer overflow-hidden outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
     primary: "bg-[#4C7A2A] text-[#FBF8F1] hover:text-[#4C7A2A] focus:ring-[#4C7A2A]",

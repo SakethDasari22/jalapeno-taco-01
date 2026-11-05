@@ -77,7 +77,7 @@ export default function Footer({ setView }: FooterProps) {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#F4EFE3]/10 hover:bg-[#4C7A2A] text-[#FBF8F1] flex items-center justify-center transition-all hover:scale-110 shadow-sm"
+                  className="w-9 h-9 rounded-full bg-[#F4EFE3]/10 hover:bg-[#4C7A2A] text-[#FBF8F1] flex items-center justify-center transition-colors shadow-sm"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -88,28 +88,28 @@ export default function Footer({ setView }: FooterProps) {
 
           {/* Quick Links Column */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-sans font-bold text-xs text-[#E8A33D] uppercase tracking-widest">
-              EXPLORE
+            <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">
+              Explore
             </h4>
             <ul className="space-y-2.5 font-sans font-semibold text-sm text-[#F4EFE3]/80">
               <li>
                 <button onClick={() => handleNavClick('home')} className="hover:text-[#4C7A2A] transition-colors cursor-pointer">
-                  Home Page
+                  Home page
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('menu')} className="hover:text-[#4C7A2A] transition-colors cursor-pointer">
-                  Our Menu
+                  Our menu
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('visit')} className="hover:text-[#4C7A2A] transition-colors cursor-pointer">
-                  Visit Location
+                  Visit location
                 </button>
               </li>
               <li>
                 <button onClick={() => handleNavClick('contact')} className="hover:text-[#4C7A2A] transition-colors cursor-pointer">
-                  Get in Touch
+                  Get in touch
                 </button>
               </li>
             </ul>
@@ -117,27 +117,27 @@ export default function Footer({ setView }: FooterProps) {
 
           {/* Location & Hours Column */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-sans font-bold text-xs text-[#E8A33D] uppercase tracking-widest">
-              LOCATE US
+            <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">
+              Locate us
             </h4>
             <div className="space-y-4 text-sm text-[#F4EFE3]/80 font-medium leading-relaxed">
               <p>
-                <span className="font-bold text-[#FBF8F1]">Jalapeño Taco Westchester</span><br />
+                <span className="font-semibold text-[#FBF8F1]">Jalapeño Taco Westchester</span><br />
                 10229 Roosevelt Rd<br />
                 Westchester, IL 60154
               </p>
               <div>
-                <p className="font-bold text-[#FBF8F1]">Hours of Operation</p>
-                <p className="text-xs text-[#F4EFE3]/60 mt-0.5">Mon - Sun: 10:00 AM - 11:00 PM</p>
-                <p className="text-xs text-[#F4EFE3]/60">Fri - Sat: Late night until midnight</p>
+                <p className="font-semibold text-[#FBF8F1]">Hours of operation</p>
+                <p className="text-xs text-[#F4EFE3]/60 mt-0.5">Mon to Sun: 10:00 AM - 11:00 PM</p>
+                <p className="text-xs text-[#F4EFE3]/60">Fri and Sat: Late night until midnight</p>
               </div>
             </div>
           </div>
 
           {/* Newsletter Form Column */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-sans font-bold text-xs text-[#E8A33D] uppercase tracking-widest">
-              THE SALSITA NEWSLETTER
+            <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">
+              The salsita newsletter
             </h4>
             <p className="text-xs text-[#F4EFE3]/70 leading-relaxed font-medium">
               Join our list to receive exclusive promo codes, direct menu announcements, and weekend catering specials!
@@ -178,9 +178,9 @@ export default function Footer({ setView }: FooterProps) {
                   <div className="w-5 h-5 rounded-full bg-[#4C7A2A] flex items-center justify-center text-[#FBF8F1] flex-shrink-0">
                     <Check className="w-3.5 h-3.5" />
                   </div>
-                  <div className="text-[11px] leading-snug font-semibold text-[#FBF8F1]">
-                    <span className="text-[#E8A33D] font-black uppercase tracking-wider flex items-center gap-1">
-                      <Sparkles className="w-3 h-3 text-[#D9352A]" /> ¡GRACIAS!
+                  <div className="text-xs leading-snug font-semibold text-[#FBF8F1]">
+                    <span className="text-[#E8A33D] font-semibold flex items-center gap-1">
+                      <Sparkles className="w-3 h-3 text-[#D9352A]" /> ¡gracias!
                     </span>
                     Check your inbox for 10% off!
                   </div>
@@ -192,17 +192,17 @@ export default function Footer({ setView }: FooterProps) {
         </div>
 
         {/* Footer Legal and Copyright details */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-[11px] font-mono text-[#F4EFE3]/50 tracking-wider">
+        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-sm font-sans text-[#F4EFE3]/50">
           <p>© {new Date().getFullYear()} JALAPEÑO TACO. ALL RIGHTS RESERVED.</p>
           <p className="mt-4 sm:mt-0 flex items-center gap-1.5">
-            MADE WITH FRESH JALAPEÑOS IN CICERO, ILLINOIS
+            Made with fresh jalapeños in cicero, ILLINOIS
           </p>
         </div>
 
       </div>
 
       {/* Decorative Bottom Tri-Color Gradient Stripe */}
-      <div className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-[#4C7A2A] via-[#D9352A] to-[#E8A33D] w-full" />
+      <div className="absolute bottom-0 left-0 h-1.5 bg-[#4C7A2A] w-full" />
     </footer>
   );
 }

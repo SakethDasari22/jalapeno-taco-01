@@ -45,11 +45,11 @@ export default function ContactView() {
     <div id="contact-view-wrapper" className="bg-[#FBF8F1] min-h-screen pt-24 pb-32 overflow-x-hidden">
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 text-center">
-        <span className="font-mono text-xs text-[#4C7A2A] font-bold tracking-widest uppercase mb-2.5 block">
-          REACH OUT TO JALAPEÑO TACO
+        <span className="font-sans text-sm text-[#4C7A2A] font-semibold mb-2.5 block">
+          Reach out to jalapeño taco
         </span>
-        <h1 className="text-3xl sm:text-5xl font-sans font-black tracking-tight text-[#1F2A1A] leading-none mb-6">
-          Connect With Our Team
+        <h1 className="text-3xl sm:text-5xl font-sans font-semibold tracking-tight text-[#1F2A1A] leading-none mb-6">
+          Connect with our team
         </h1>
         <p className="text-sm md:text-base text-[#6B6358] max-w-lg mx-auto leading-relaxed font-medium">
           Have an event, feedback on our tacos, or inquiry about bulk ordering? Send us a message and we will respond as fast as we grill!
@@ -61,19 +61,19 @@ export default function ContactView() {
           
           {/* Contact Details & Info (Left Column) */}
           <motion.div
-            className="lg:col-span-5 space-y-8 glass-panel p-8 sm:p-10 rounded-3xl"
+            className="lg:col-span-5 space-y-8 glass-panel p-8 sm:p-10 rounded-2xl"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <div>
-              <div className="flex items-center gap-2 mb-2 font-mono text-[10px] tracking-wider text-[#E8A33D] font-bold uppercase">
+              <div className="flex items-center gap-2 mb-2 font-sans text-sm text-[#E8A33D] font-semibold">
                 <Sparkles className="w-3.5 h-3.5 text-[#D9352A]" />
-                DIRECT CHANNELS
+                Direct channels
               </div>
-              <h2 className="text-2xl font-sans font-black tracking-tight text-[#1F2A1A]">
-                Get In Touch Today
+              <h2 className="text-2xl font-sans font-semibold tracking-tight text-[#1F2A1A]">
+                Get in touch today
               </h2>
             </div>
 
@@ -83,10 +83,10 @@ export default function ContactView() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-xs text-[#E8A33D] tracking-wide uppercase">Call Us</h4>
+                  <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">Call Us</h4>
                   <a
                     href="tel:+17086529000"
-                    className="text-sm font-mono font-bold text-[#1F2A1A] hover:text-[#4C7A2A] transition-colors mt-1 block"
+                    className="text-sm font-sans font-semibold text-[#1F2A1A] hover:text-[#4C7A2A] transition-colors mt-1 block"
                   >
                     (708) 652-9000
                   </a>
@@ -98,10 +98,10 @@ export default function ContactView() {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-xs text-[#E8A33D] tracking-wide uppercase">Email Address</h4>
+                  <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">Email address</h4>
                   <a
                     href="mailto:hola@jalapenotacowestchester.com"
-                    className="text-sm font-mono font-bold text-[#1F2A1A] hover:text-[#4C7A2A] transition-colors mt-1 block"
+                    className="text-sm font-sans font-semibold text-[#1F2A1A] hover:text-[#4C7A2A] transition-colors mt-1 block"
                   >
                     hola@jalapenotacowestchester.com
                   </a>
@@ -113,7 +113,7 @@ export default function ContactView() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-xs text-[#E8A33D] tracking-wide uppercase">Address Location</h4>
+                  <h4 className="font-sans font-semibold text-xs text-[#E8A33D]">Address location</h4>
                   <p className="text-sm text-[#6B6358] font-semibold mt-1">
                     10229 Roosevelt Rd, Westchester, IL 60154
                   </p>
@@ -122,7 +122,7 @@ export default function ContactView() {
             </div>
 
             {/* Quick Map embed widget */}
-            <div className="h-44 rounded-xl overflow-hidden shadow-inner border border-[#4C7A2A]/10 relative">
+            <div className="h-44 rounded-xl overflow-hidden border border-[#4C7A2A]/10 relative">
               <iframe
                 src="https://maps.google.com/maps?q=10229%20Roosevelt%20Rd,%20Westchester,%20IL%2060154&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0 absolute inset-0 opacity-80 invert filter hue-rotate-60 brightness-90 saturate-50"
@@ -136,7 +136,7 @@ export default function ContactView() {
 
           {/* Form Area with Floating Labels (Right Column) */}
           <motion.div
-            className="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-3xl"
+            className="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-2xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -153,20 +153,20 @@ export default function ContactView() {
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   onFocus={() => handleFocus('name')}
                   onBlur={handleBlur}
-                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold tracking-wide outline-none transition-colors duration-300 ${
+                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold  outline-none transition-colors duration-300 ${
                     focusedField === 'name' ? 'border-[#D9352A] text-[#1F2A1A]' : 'border-[#4C7A2A]/20 text-[#1F2A1A]'
                   }`}
                   disabled={isSubmitting || isSubmitted}
                 />
                 <label
                   htmlFor="contact-name"
-                  className={`absolute left-1 transition-all duration-300 pointer-events-none select-none ${
+                  className={`absolute left-1 transition-colors duration-300 pointer-events-none select-none ${
                     isFloating('name')
-                      ? 'top-1 text-[10px] text-[#D9352A] font-bold font-mono tracking-widest uppercase'
+                      ? 'top-1 text-xs text-[#D9352A] font-semibold  '
                       : 'top-5 text-sm font-semibold text-[#6B6358]'
                   }`}
                 >
-                  Your Full Name
+                  Your full name
                 </label>
               </div>
 
@@ -179,20 +179,20 @@ export default function ContactView() {
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   onFocus={() => handleFocus('email')}
                   onBlur={handleBlur}
-                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold tracking-wide outline-none transition-colors duration-300 ${
+                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold  outline-none transition-colors duration-300 ${
                     focusedField === 'email' ? 'border-[#D9352A] text-[#1F2A1A]' : 'border-[#4C7A2A]/20 text-[#1F2A1A]'
                   }`}
                   disabled={isSubmitting || isSubmitted}
                 />
                 <label
                   htmlFor="contact-email"
-                  className={`absolute left-1 transition-all duration-300 pointer-events-none select-none ${
+                  className={`absolute left-1 transition-colors duration-300 pointer-events-none select-none ${
                     isFloating('email')
-                      ? 'top-1 text-[10px] text-[#D9352A] font-bold font-mono tracking-widest uppercase'
+                      ? 'top-1 text-xs text-[#D9352A] font-semibold  '
                       : 'top-5 text-sm font-semibold text-[#6B6358]'
                   }`}
                 >
-                  Email Address
+                  Email address
                 </label>
               </div>
 
@@ -205,20 +205,20 @@ export default function ContactView() {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   onFocus={() => handleFocus('message')}
                   onBlur={handleBlur}
-                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold tracking-wide outline-none transition-colors duration-300 resize-none ${
+                  className={`w-full bg-transparent border-b-2 py-3 px-1 pt-6 text-sm font-semibold  outline-none transition-colors duration-300 resize-none ${
                     focusedField === 'message' ? 'border-[#D9352A] text-[#1F2A1A]' : 'border-[#4C7A2A]/20 text-[#1F2A1A]'
                   }`}
                   disabled={isSubmitting || isSubmitted}
                 />
                 <label
                   htmlFor="contact-message"
-                  className={`absolute left-1 transition-all duration-300 pointer-events-none select-none ${
+                  className={`absolute left-1 transition-colors duration-300 pointer-events-none select-none ${
                     isFloating('message')
-                      ? 'top-1 text-[10px] text-[#D9352A] font-bold font-mono tracking-widest uppercase'
+                      ? 'top-1 text-xs text-[#D9352A] font-semibold  '
                       : 'top-5 text-sm font-semibold text-[#6B6358]'
                   }`}
                 >
-                  Write Your Message
+                  Write your message
                 </label>
               </div>
 
@@ -261,7 +261,7 @@ export default function ContactView() {
                         ) : (
                           <>
                             <Send className="w-4 h-4" />
-                            Send Message
+                            Send message
                           </>
                         )}
                       </Button>
@@ -269,7 +269,7 @@ export default function ContactView() {
                   ) : (
                     <motion.div
                       key="success-badge"
-                      className="flex items-center gap-3 bg-[#4C7A2A] text-[#FBF8F1] px-6 py-3 rounded-full shadow-lg"
+                      className="flex items-center gap-3 bg-[#4C7A2A] text-[#FBF8F1] px-6 py-3 rounded-full shadow-sm"
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ type: 'spring', damping: 15, stiffness: 200 }}
@@ -277,8 +277,8 @@ export default function ContactView() {
                       <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
                         <Check className="w-4 h-4 text-[#FBF8F1]" />
                       </div>
-                      <span className="font-sans font-bold text-sm tracking-wide">
-                        Message Sent Successfully! Hola!
+                      <span className="font-sans font-semibold text-sm">
+                        Message sent successfully! hola!
                       </span>
                     </motion.div>
                   )}

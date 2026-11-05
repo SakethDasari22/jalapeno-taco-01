@@ -9,10 +9,10 @@ interface LogoProps {
 export default function Logo({ className = '', animate = true, size = 'md' }: LogoProps) {
   // Sizes mapping
   const sizes = {
-    sm: { svg: 'h-8 w-auto', text: 'text-sm font-bold tracking-tight' },
-    md: { svg: 'h-10 w-auto', text: 'text-lg font-bold tracking-tight' },
-    lg: { svg: 'h-14 w-auto', text: 'text-2xl font-bold tracking-tight' },
-    hero: { svg: 'h-24 w-auto', text: 'text-5xl font-extrabold tracking-tight' },
+    sm: { svg: 'h-8 w-auto', text: 'text-sm font-semibold tracking-tight' },
+    md: { svg: 'h-10 w-auto', text: 'text-lg font-semibold tracking-tight' },
+    lg: { svg: 'h-14 w-auto', text: 'text-2xl font-semibold tracking-tight' },
+    hero: { svg: 'h-24 w-auto', text: 'text-5xl font-semibold tracking-tight' },
   };
 
   const currentSize = sizes[size] || sizes.md;
@@ -85,8 +85,8 @@ export default function Logo({ className = '', animate = true, size = 'md' }: Lo
 
         {/* Wordmark */}
         <span className={`font-sans tracking-tight ${currentSize.text} flex items-center`}>
-          <span className="text-[#4C7A2A] font-black mr-1">JALAPEÑO</span>
-          <span className="text-[#D9352A] font-black">TACO</span>
+          <span className="text-[#4C7A2A] font-semibold mr-1">Jalapeño</span>
+          <span className="text-[#D9352A] font-semibold">Taco</span>
         </span>
       </div>
     );
@@ -134,17 +134,17 @@ export default function Logo({ className = '', animate = true, size = 'md' }: Lo
           variants={textGreenVariants}
           initial="hidden"
           animate="visible"
-          className="text-[#4C7A2A] font-black mr-1.5 block"
+          className="text-[#4C7A2A] font-semibold mr-1.5 block"
         >
-          JALAPEÑO
+          Jalapeño
         </motion.span>
         <motion.span
           variants={textRedVariants}
           initial="hidden"
           animate="visible"
-          className="text-[#D9352A] font-black block"
+          className="text-[#D9352A] font-semibold block"
         >
-          TACO
+          Taco
         </motion.span>
       </div>
     </div>

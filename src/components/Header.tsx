@@ -40,10 +40,10 @@ export default function Header({ currentView, setView }: HeaderProps) {
     <>
       <motion.header
         id="main-navigation-bar"
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${
           isScrolled
-            ? 'bg-[#F4EFE3]/80 backdrop-blur-md border-b border-[#4C7A2A]/10 shadow-sm py-4'
-            : 'bg-[#F4EFE3]/40 backdrop-blur-sm border-b border-[#4C7A2A]/5 py-6'
+            ? 'bg-[#F4EFE3] border-b border-[#1F2A1A]/10 py-4'
+            : 'bg-[#F4EFE3] border-b border-[#1F2A1A]/10 py-5'
         }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -64,15 +64,15 @@ export default function Header({ currentView, setView }: HeaderProps) {
                   key={item.id}
                   id={`nav-item-${item.id}`}
                   onClick={() => handleNavClick(item.id)}
-                  className="relative py-2 text-sm font-semibold tracking-wide cursor-pointer transition-colors duration-300"
+                  className="relative py-2 text-sm font-semibold cursor-pointer transition-colors duration-300"
                   style={{ color: isActive ? '#4C7A2A' : '#6B6358' }}
                 >
                   <span className="hover:text-[#4C7A2A] transition-colors">{item.label}</span>
                   {isActive && (
                     <motion.div
                       layoutId="header-nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D9352A]"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4C7A2A]"
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     />
                   )}
                 </button>
@@ -84,7 +84,7 @@ export default function Header({ currentView, setView }: HeaderProps) {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+17086529000"
-              className="flex items-center gap-2 text-xs font-mono font-medium text-[#6B6358] hover:text-[#4C7A2A] transition-colors"
+              className="flex items-center gap-2 text-sm font-sans font-medium text-[#6B6358] hover:text-[#4C7A2A] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#E8A33D]" />
               (708) 652-9000
@@ -94,7 +94,7 @@ export default function Header({ currentView, setView }: HeaderProps) {
               size="sm"
               onClick={() => handleNavClick('menu')}
             >
-              Order Online
+              Order online
               <ArrowRight className="w-3.5 h-3.5" />
             </Button>
           </div>
@@ -147,7 +147,7 @@ export default function Header({ currentView, setView }: HeaderProps) {
                       key={item.id}
                       id={`mobile-nav-item-${item.id}`}
                       onClick={() => handleNavClick(item.id)}
-                      className={`text-2xl font-sans font-bold tracking-tight py-2 transition-all ${
+                      className={`text-2xl font-sans font-semibold tracking-tight py-2 transition-colors ${
                         isActive ? 'text-[#4C7A2A]' : 'text-[#6B6358]'
                       }`}
                       initial={{ opacity: 0, x: -30 }}
@@ -173,8 +173,8 @@ export default function Header({ currentView, setView }: HeaderProps) {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="text-xs font-mono text-[#6B6358]">
-                <p className="font-bold text-[#1F2A1A]">JALAPEÑO TACO WESTCHESTER</p>
+              <div className="text-sm font-sans text-[#6B6358]">
+                <p className="font-semibold text-[#1F2A1A]">Jalapeño Taco westchester</p>
                 <p className="mt-1">10229 Roosevelt Rd, Westchester, IL 60154</p>
                 <p className="mt-0.5">Call: (708) 652-9000</p>
               </div>
@@ -185,7 +185,7 @@ export default function Header({ currentView, setView }: HeaderProps) {
                   className="w-full"
                   onClick={() => handleNavClick('menu')}
                 >
-                  Order Pickup & Delivery
+                  Order pickup & delivery
                 </Button>
               </div>
             </motion.div>

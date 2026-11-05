@@ -133,11 +133,11 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#1F2A1A] to-transparent" />
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
-          <span className="font-mono text-xs text-[#E8A33D] font-bold tracking-widest uppercase mb-3 block">
-            House Recipes Since Day One
+          <span className="font-sans text-sm text-[#4C7A2A] font-medium mb-3 block">
+            House recipes since day one
           </span>
-          <h1 className="text-4xl md:text-6xl font-sans font-black tracking-tight mb-4">
-            Our Traditional Menu
+          <h1 className="text-4xl md:text-6xl font-sans font-semibold tracking-tight mb-4">
+            Our traditional menu
           </h1>
           <p className="text-[#F4EFE3]/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Freshly prepared with pure local ingredients, hand-pressed tortillas, and our family adobo recipes. Select a category below to explore.
@@ -150,7 +150,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
               placeholder="Search dishes (e.g. Al Pastor, Quesadilla...)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#FBF8F1] text-[#1F2A1A] text-sm font-sans font-medium px-5 py-3.5 pl-12 rounded-full border border-transparent shadow-md focus:border-[#4C7A2A] focus:outline-none transition-colors"
+              className="w-full bg-[#FBF8F1] text-[#1F2A1A] text-sm font-sans font-medium px-5 py-3.5 pl-12 rounded-full border border-transparent shadow-sm focus:border-[#4C7A2A] focus:outline-none transition-colors"
             />
             <Search className="w-5 h-5 text-[#6B6358] absolute left-4 top-1/2 -translate-y-1/2" />
           </div>
@@ -158,7 +158,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
       </div>
 
       {/* Sticky Horizontal Categories Tabs Bar with Layout Underline */}
-      <div className="sticky top-[72px] md:top-[88px] z-30 bg-[#FBF8F1]/70 backdrop-blur-md border-b border-white/30 shadow-md py-4 overflow-x-auto scrollbar-hide">
+      <div className="sticky top-[72px] md:top-[88px] z-30 bg-[#FBF8F1]/70 border-b border-white/30 shadow-sm py-4 overflow-x-auto scrollbar-hide">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex gap-2 sm:gap-4 flex-nowrap min-w-max justify-center">
           {CATEGORIES.map((category) => {
             const isActive = activeCategory === category.id;
@@ -167,7 +167,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                 key={category.id}
                 id={`tab-${category.id}`}
                 onClick={() => handleCategoryClick(category.id)}
-                className="relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-colors duration-300 cursor-pointer select-none"
+                className="relative px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-300 cursor-pointer select-none"
                 style={{ color: isActive ? '#FBF8F1' : '#6B6358' }}
               >
                 <span className="relative z-10">{category.name}</span>
@@ -200,11 +200,11 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
             >
               {/* Category Header */}
               <div className="mb-8">
-                <div className="flex items-center gap-2 mb-2 font-mono text-[10px] tracking-wider text-[#E8A33D] font-bold uppercase">
+                <div className="flex items-center gap-2 mb-2 font-sans text-sm text-[#E8A33D] font-semibold">
                   <Sparkles className="w-3 h-3 text-[#D9352A]" />
-                  TACO TAQUERIA SELECTION
+                  Taco taqueria selection
                 </div>
-                <h2 className="text-2xl md:text-3xl font-sans font-black tracking-tight text-[#1F2A1A]">
+                <h2 className="text-2xl md:text-3xl font-sans font-semibold tracking-tight text-[#1F2A1A]">
                   {category.name}
                 </h2>
               </div>
@@ -222,7 +222,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                     key={item.id}
                     id={`menu-card-${item.id}`}
                     variants={itemVariants}
-                    className="glass-panel hover:bg-white/60 transition-all duration-300 cursor-pointer flex flex-col justify-between group shadow-sm"
+                    className="glass-panel hover:bg-white/60 transition-colors duration-300 cursor-pointer flex flex-col justify-between group shadow-sm"
                     whileHover={{
                       y: -6,
                       scale: 1.02,
@@ -236,10 +236,10 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-700"
                           referrerPolicy="no-referrer"
                         />
-                        <div className="absolute bottom-3 right-3 bg-[#4C7A2A] text-[#FBF8F1] font-mono text-xs font-black px-2.5 py-1 rounded-full border border-[#FBF8F1]/10 shadow-md">
+                        <div className="absolute bottom-3 right-3 bg-[#4C7A2A] text-[#FBF8F1] font-sans text-sm font-semibold px-2.5 py-1 rounded-full border border-[#FBF8F1]/10 shadow-sm">
                           {item.priceLarge ? (
                             `$${item.price.toFixed(2)}+`
                           ) : (
@@ -249,7 +249,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-sans font-bold text-base text-[#1F2A1A] group-hover:text-[#4C7A2A] transition-colors mb-1.5 leading-tight">
+                      <h3 className="font-sans font-semibold text-base text-[#1F2A1A] group-hover:text-[#4C7A2A] transition-colors mb-1.5 leading-tight">
                         {item.name}
                       </h3>
 
@@ -261,8 +261,8 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
 
                     {/* Quick Order Accent */}
                     <div className="flex items-center justify-between text-xs font-semibold text-[#6B6358] border-t border-[#4C7A2A]/5 pt-3.5 mt-auto">
-                      <span className="text-[10px] font-mono text-[#E8A33D] font-bold uppercase">
-                        TAP TO CUSTOMIZE
+                      <span className="text-sm font-sans text-[#E8A33D] font-semibold">
+                        Tap to customize
                       </span>
                       <div className="w-7 h-7 rounded-full bg-[#4C7A2A]/10 text-[#4C7A2A] flex items-center justify-center group-hover:bg-[#4C7A2A] group-hover:text-[#FBF8F1] transition-colors duration-300">
                         <Plus className="w-4 h-4" />
@@ -278,7 +278,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
         {/* Empty Search State */}
         {searchQuery && CATEGORIES.every((c) => !hasItems(c.id)) && (
           <div className="text-center py-20 bg-[#F4EFE3]/30 rounded-2xl border border-dashed border-[#4C7A2A]/10">
-            <p className="font-sans font-bold text-lg text-[#1F2A1A] mb-2">
+            <p className="font-sans font-semibold text-lg text-[#1F2A1A] mb-2">
               "No dishes matched '{searchQuery}'"
             </p>
             <p className="text-sm text-[#6B6358] max-w-xs mx-auto">
@@ -290,7 +290,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
               className="mt-6"
               onClick={() => setSearchQuery('')}
             >
-              Clear Search Query
+              Clear search query
             </Button>
           </div>
         )}
@@ -302,7 +302,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
           <div id="menu-overlay-backdrop" className="fixed inset-0 z-50 flex items-center justify-center p-4">
             {/* Dark blurred glass backdrop with smooth fade-in */}
             <motion.div
-              className="absolute inset-0 bg-[#1F2A1A]/75 backdrop-blur-md"
+              className="absolute inset-0 bg-[#1F2A1A]/75"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -313,7 +313,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
             {/* Modal Body Container: scales from 0.95 to 1 with slight upward slide */}
             <motion.div
               id="menu-item-details-modal"
-              className="relative bg-[#FBF8F1]/75 backdrop-blur-2xl w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-white/45 z-10 max-h-[90vh] flex flex-col justify-between"
+              className="relative bg-[#FBF8F1]/75 backdrop-blur-2xl w-full max-w-2xl rounded-2xl overflow-hidden shadow-sm border border-white/45 z-10 max-h-[90vh] flex flex-col justify-between"
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -323,7 +323,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
               <button
                 id="close-menu-modal"
                 onClick={() => setSelectedMenuItem(null)}
-                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-[#D9352A] text-[#FBF8F1] transition-colors focus:outline-none cursor-pointer shadow-lg"
+                className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-[#D9352A] text-[#FBF8F1] transition-colors focus:outline-none cursor-pointer shadow-sm"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -332,7 +332,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
               {/* Scrollable Modal Content */}
               <div className="overflow-y-auto overflow-x-hidden p-6 md:p-8 space-y-6">
                 {/* Hero Dish Photo */}
-                <div className="relative aspect-[16/9] md:aspect-[16/8] rounded-2xl overflow-hidden shadow-md">
+                <div className="relative aspect-[16/9] md:aspect-[16/8] rounded-2xl overflow-hidden shadow-sm">
                   <img
                     src={selectedMenuItem.image}
                     alt={selectedMenuItem.name}
@@ -341,10 +341,10 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5 text-[#FBF8F1]">
-                    <span className="font-mono text-[10px] tracking-widest text-[#E8A33D] font-bold uppercase mb-1.5 block">
+                    <span className="font-sans text-sm text-[#E8A33D] font-semibold mb-1.5 block">
                       {selectedMenuItem.category.replace('-', ' ')}
                     </span>
-                    <h2 className="text-xl md:text-3xl font-sans font-black tracking-tight leading-tight">
+                    <h2 className="text-xl md:text-3xl font-sans font-semibold tracking-tight leading-tight">
                       {selectedMenuItem.name}
                     </h2>
                   </div>
@@ -352,8 +352,8 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
 
                 {/* Dish Narrative & Description */}
                 <div className="border-b border-[#4C7A2A]/5 pb-6">
-                  <h4 className="font-sans font-bold text-xs text-[#4C7A2A] tracking-wider uppercase mb-2">
-                    DISH DETAILS
+                  <h4 className="font-sans font-semibold text-xs text-[#4C7A2A] mb-2">
+                    Dish DETAILS
                   </h4>
                   <p className="text-sm md:text-base text-[#6B6358] font-medium leading-relaxed">
                     {selectedMenuItem.description}
@@ -364,10 +364,10 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 border-b border-[#4C7A2A]/5">
                   {/* Base Pricing */}
                   <div>
-                    <h4 className="font-sans font-bold text-xs text-[#4C7A2A] tracking-wider uppercase mb-2">
-                      PRICE
+                    <h4 className="font-sans font-semibold text-xs text-[#4C7A2A] mb-2">
+                      Price
                     </h4>
-                    <div className="text-2xl font-mono font-black text-[#D9352A]">
+                    <div className="text-2xl font-semibold text-[#D9352A]">
                       {selectedMenuItem.priceLarge ? (
                         selectedSize === 'sm' ? (
                           `$${selectedMenuItem.price.toFixed(2)} (Small)`
@@ -383,13 +383,13 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                   {/* Size Selector for Aguas Frescas */}
                   {selectedMenuItem.priceLarge && (
                     <div>
-                      <h4 className="font-sans font-bold text-xs text-[#4C7A2A] tracking-wider uppercase mb-2">
-                        CHOOSE SIZE
+                      <h4 className="font-sans font-semibold text-xs text-[#4C7A2A] mb-2">
+                        Choose size
                       </h4>
                       <div className="flex gap-2.5">
                         <button
                           onClick={() => setSelectedSize('sm')}
-                          className={`flex-1 py-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
+                          className={`flex-1 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
                             selectedSize === 'sm'
                               ? 'bg-[#4C7A2A] text-[#FBF8F1] border-transparent shadow-sm'
                               : 'bg-transparent text-[#6B6358] border-[#4C7A2A]/20 hover:border-[#4C7A2A]'
@@ -399,7 +399,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                         </button>
                         <button
                           onClick={() => setSelectedSize('lg')}
-                          className={`flex-1 py-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
+                          className={`flex-1 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
                             selectedSize === 'lg'
                               ? 'bg-[#4C7A2A] text-[#FBF8F1] border-transparent shadow-sm'
                               : 'bg-transparent text-[#6B6358] border-[#4C7A2A]/20 hover:border-[#4C7A2A]'
@@ -414,27 +414,27 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                   {/* Custom Protein options for Tacos / Burritos / Bowls */}
                   {!selectedMenuItem.priceLarge && selectedMenuItem.category !== 'sides' && (
                     <div>
-                      <h4 className="font-sans font-bold text-xs text-[#4C7A2A] tracking-wider uppercase mb-2">
-                        PROTEIN SELECTION
+                      <h4 className="font-sans font-semibold text-xs text-[#4C7A2A] mb-2">
+                        Protein selection
                       </h4>
                       <select
                         value={selectedProtein}
                         onChange={(e) => setSelectedProtein(e.target.value)}
-                        className="w-full bg-transparent border border-[#4C7A2A]/20 hover:border-[#4C7A2A] text-sm font-sans font-bold text-[#1F2A1A] rounded-xl px-3.5 py-2.5 outline-none"
+                        className="w-full bg-transparent border border-[#4C7A2A]/20 hover:border-[#4C7A2A] text-sm font-sans font-semibold text-[#1F2A1A] rounded-xl px-3.5 py-2.5 outline-none"
                       >
-                        <option value="Salty Beef (Cecina)">Cecina (Salty Beef)</option>
-                        <option value="Marinated Pork (Al Pastor)">Al Pastor (Marinated Pork)</option>
-                        <option value="Chicken (Pollo)">Pollo (Chicken)</option>
-                        <option value="Braised Pork (Carnitas)">Carnitas (Pork)</option>
-                        <option value="Spiced Sausage (Chorizo)">Chorizo (Mexican Sausage)</option>
+                        <option value="Salty Beef (Cecina)">Cecina (salty beef)</option>
+                        <option value="Marinated Pork (Al Pastor)">Al pastor (marinated pork)</option>
+                        <option value="Chicken (Pollo)">Pollo (chicken)</option>
+                        <option value="Braised Pork (Carnitas)">Carnitas (pork)</option>
+                        <option value="Spiced Sausage (Chorizo)">Chorizo (Mexican sausage)</option>
                         {selectedMenuItem.category === 'tacos' && (
                           <>
-                            <option value="Beef Tripe (Tripas)">Tripas (Crispy Tripe)</option>
-                            <option value="Grilled Fish (Pescado)">Pescado (Fish)</option>
-                            <option value="Camarón (Shrimp)">Camarón (Shrimp)</option>
+                            <option value="Beef Tripe (Tripas)">Tripas (crispy tripe)</option>
+                            <option value="Grilled Fish (Pescado)">Pescado (fish)</option>
+                            <option value="Camarón (Shrimp)">Camarón (shrimp)</option>
                           </>
                         )}
-                        <option value="Vegetarian">Vegetarian (Avocado & Cheese)</option>
+                        <option value="Vegetarian">Vegetarian (avocado & cheese)</option>
                       </select>
                     </div>
                   )}
@@ -443,8 +443,8 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                 {/* Salsas Customization Options */}
                 {selectedMenuItem.category !== 'sides' && selectedMenuItem.category !== 'drinks' && selectedMenuItem.category !== 'aguas-frescas' && (
                   <div className="pb-4">
-                    <h4 className="font-sans font-bold text-xs text-[#4C7A2A] tracking-wider uppercase mb-3">
-                      HOUSE SALSA PREFERENCE
+                    <h4 className="font-sans font-semibold text-xs text-[#4C7A2A] mb-3">
+                      House salsa preference
                     </h4>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                       {[
@@ -456,7 +456,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                         <button
                           key={opt.id}
                           onClick={() => setSalsaOption(opt.id)}
-                          className={`px-3 py-2.5 rounded-xl border text-[11px] font-bold transition-all cursor-pointer ${
+                          className={`px-3 py-2.5 rounded-xl border text-xs font-semibold transition-colors cursor-pointer ${
                             salsaOption === opt.id
                               ? 'bg-[#E8A33D] text-[#1F2A1A] border-transparent shadow-sm'
                               : 'bg-[#F4EFE3]/40 text-[#6B6358] border-[#4C7A2A]/10 hover:border-[#4C7A2A]/30'
@@ -480,7 +480,7 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                   >
                     <Minus className="w-4 h-4" />
                   </button>
-                  <span className="font-mono font-bold text-base text-[#1F2A1A] w-5 text-center">
+                  <span className="font-mono font-semibold text-base text-[#1F2A1A] w-5 text-center">
                     {itemQuantity}
                   </span>
                   <button
@@ -495,14 +495,14 @@ export default function MenuView({ selectedMenuItem, setSelectedMenuItem }: Menu
                 <Button
                   variant={cartSuccess ? 'outline' : 'primary'}
                   size="md"
-                  className="px-8 flex-1 sm:flex-initial ml-6 shadow-md"
+                  className="px-8 flex-1 sm:flex-initial ml-6 shadow-sm"
                   onClick={handleAddToCart}
                   disabled={cartSuccess}
                 >
                   {cartSuccess ? (
                     <>
                       <Check className="w-4 h-4 text-[#4C7A2A]" />
-                      Added to Order!
+                      Added to order!
                     </>
                   ) : (
                     `Add ${itemQuantity} to Order`
