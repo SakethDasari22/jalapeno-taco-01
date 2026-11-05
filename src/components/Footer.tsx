@@ -193,7 +193,7 @@ export default function Footer({ setView }: FooterProps) {
 
         {/* Footer Legal and Copyright details */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-sm font-sans text-[#F4EFE3]/50">
-          <p>© {new Date().getFullYear()} JALAPEÑO TACO. ALL RIGHTS RESERVED.</p>
+          <p>© {new Date().getFullYear()} Jalapeño Taco. All rights reserved.</p>
           <p className="mt-4 sm:mt-0 flex items-center gap-1.5">
             Made with fresh jalapeños in cicero, ILLINOIS
           </p>
